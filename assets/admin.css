@@ -1,0 +1,56 @@
+.tp-admin-container {
+    max-width: 1200px;
+}
+
+.tp-admin-tier-card,
+.tp-admin-usage-card {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.remove-tier,
+.remove-usage {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    padding: 5px 10px;
+    transition: opacity 0.3s ease;
+}
+
+.remove-tier:hover,
+.remove-usage:hover {
+    opacity: 0.7;
+}
+
+.tp-admin-actions button {
+    margin-right: 10px;
+}
+
+.tp-admin-shortcode {
+    position: relative;
+}
+
+.tp-admin-shortcode code {
+    cursor: pointer;
+    user-select: all;
+    transition: background-color 0.3s ease;
+}
+
+.tp-admin-shortcode code:hover {
+    background: #e1e1e1;
+}
+
+.tp-admin-shortcode ul {
+    margin-top: 15px;
+    padding-left: 20px;
+}
+
+.tp-admin-shortcode ul li {
+    margin-bottom: 8px;
+    list-style-type: disc;
+}
+
+.tp-admin-shortcode ul li code {
+    font-size: 12px;
+}

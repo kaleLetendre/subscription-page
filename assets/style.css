@@ -1,0 +1,567 @@
+.tp-subscription-container {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    color: #2c3e50;
+}
+
+.tp-subscription-hero {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.tp-heading {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #1a1a1a;
+    line-height: 1.2;
+}
+
+.tp-subheading {
+    font-size: 1.25rem;
+    color: #6c757d;
+    margin-bottom: 30px;
+}
+
+.tp-billing-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+    padding: 8px 20px;
+    background: #f8f9fa;
+    border-radius: 50px;
+}
+
+.tp-badge {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.tp-toggle-switch {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.tp-toggle-switch .tp-label {
+    font-size: 0.95rem;
+    color: #6c757d;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.tp-toggle-switch .tp-label.active {
+    color: #1a1a1a;
+    font-weight: 600;
+}
+
+.tp-toggle {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 26px;
+}
+
+.tp-toggle input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.tp-slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #667eea;
+    transition: 0.4s;
+    border-radius: 34px;
+}
+
+.tp-slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+input:checked + .tp-slider:before {
+    transform: translateX(24px);
+}
+
+.tp-tier-cards {
+    margin-bottom: 80px;
+}
+
+.tp-cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin: 0 auto;
+}
+
+.tp-tier-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+}
+
+.tp-tier-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+.tp-tier-card.tp-recommended {
+    border: 2px solid #667eea;
+    transform: scale(1.05);
+}
+
+.tp-tier-card.tp-recommended:hover {
+    transform: scale(1.05) translateY(-5px);
+}
+
+.tp-recommended-badge {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    text-align: center;
+    padding: 8px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.tp-card-inner {
+    padding: 35px 30px;
+}
+
+.tp-tier-name {
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #1a1a1a;
+}
+
+.tp-price {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.tp-amount {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    display: block;
+}
+
+.tp-currency {
+    font-size: 1.5rem;
+    vertical-align: super;
+}
+
+.tp-period {
+    font-size: 1rem;
+    color: #6c757d;
+    display: block;
+    margin-top: 5px;
+}
+
+.tp-annual-savings {
+    font-size: 0.9rem;
+    color: #28a745;
+    margin-top: 8px;
+}
+
+.tp-monthly-equivalent {
+    font-weight: 500;
+}
+
+.tp-tier-button {
+    width: 100%;
+    padding: 14px 24px;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.tp-tier-button.tp-primary {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.tp-tier-button.tp-primary:hover {
+    background: linear-gradient(135deg, #5a67d8 0%, #6b4298 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+.tp-tier-button.tp-secondary {
+    background: white;
+    color: #667eea;
+    border: 2px solid #667eea;
+}
+
+.tp-tier-button.tp-secondary:hover {
+    background: #667eea;
+    color: white;
+}
+
+.tp-features {
+    border-top: 1px solid #e9ecef;
+    padding-top: 25px;
+}
+
+.tp-features-heading {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #495057;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.tp-feature-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.tp-feature-list li {
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 0.95rem;
+    color: #495057;
+}
+
+.tp-check-icon {
+    color: #28a745;
+    flex-shrink: 0;
+}
+
+.tp-usage-pricing {
+    background: #f8f9fa;
+    border-radius: 12px;
+    padding: 60px 40px;
+    margin-bottom: 80px;
+}
+
+.tp-section-title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 40px;
+    color: #1a1a1a;
+}
+
+.tp-usage-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.tp-usage-card {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tp-usage-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.tp-usage-icon {
+    color: #667eea;
+    margin-bottom: 20px;
+}
+
+.tp-usage-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #1a1a1a;
+}
+
+.tp-usage-price {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #667eea;
+    margin-bottom: 20px;
+}
+
+.tp-usage-button {
+    padding: 10px 24px;
+    background: white;
+    color: #667eea;
+    border: 2px solid #667eea;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.tp-usage-button:hover {
+    background: #667eea;
+    color: white;
+}
+
+.tp-comparison {
+    margin-bottom: 80px;
+}
+
+.tp-comparison-table-wrapper {
+    overflow-x: auto;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
+}
+
+.tp-comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tp-comparison-table thead {
+    background: #f8f9fa;
+}
+
+.tp-comparison-table th {
+    padding: 20px;
+    text-align: left;
+    font-weight: 600;
+    color: #1a1a1a;
+    border-bottom: 2px solid #dee2e6;
+}
+
+.tp-comparison-table td {
+    padding: 18px 20px;
+    border-bottom: 1px solid #e9ecef;
+    color: #495057;
+}
+
+.tp-comparison-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.tp-comparison-table td:first-child {
+    font-weight: 600;
+    color: #1a1a1a;
+}
+
+.tp-dash {
+    color: #dee2e6;
+    font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+    .tp-heading {
+        font-size: 2rem;
+    }
+    
+    .tp-cards-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .tp-tier-card.tp-recommended {
+        transform: scale(1);
+    }
+    
+    .tp-tier-card.tp-recommended:hover {
+        transform: translateY(-5px);
+    }
+    
+    .tp-comparison-table {
+        font-size: 0.9rem;
+    }
+    
+    .tp-comparison-table th,
+    .tp-comparison-table td {
+        padding: 12px;
+    }
+}
+
+[data-billing="monthly"] .tp-annual-savings {
+    display: none;
+}
+
+[data-billing="annual"] .tp-annual-savings {
+    display: block;
+}
+
+.tp-modal {
+    display: block;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    animation: fadeIn 0.3s ease;
+}
+
+.tp-modal-content {
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 30px;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+    animation: slideIn 0.3s ease;
+}
+
+.tp-modal-close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    line-height: 20px;
+}
+
+.tp-modal-close:hover,
+.tp-modal-close:focus {
+    color: #000;
+}
+
+.tp-modal-actions {
+    margin-top: 30px;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.tp-modal-confirm,
+.tp-modal-cancel {
+    padding: 12px 30px;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.tp-modal-confirm {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.tp-modal-confirm:hover {
+    background: linear-gradient(135deg, #5a67d8 0%, #6b4298 100%);
+}
+
+.tp-modal-cancel {
+    background: #f8f9fa;
+    color: #495057;
+}
+
+.tp-modal-cancel:hover {
+    background: #e9ecef;
+}
+
+.tp-loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+}
+
+.tp-spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #667eea;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+.tp-success-message {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: #28a745;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(40, 167, 69, 0.3);
+    z-index: 10001;
+    animation: slideInRight 0.3s ease;
+}
+
+.tp-success-message.tp-fade-out {
+    animation: fadeOut 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
